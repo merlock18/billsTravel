@@ -20,7 +20,67 @@ td {
 .row{
     width:100%;
 }
-.smallpic {
-    width:100%;
-    height:150px;
+
+
+.image_icon_left{
+    width:50px;
+    height:auto;
+    display: inline;
+    text-align: left;
 }
+
+.image_icon_right{
+  width:50px;
+  height:auto;
+  display: flexbox;
+  fl
+}
+
+.wrapper {
+    display: block;
+    align-items: center;
+    min-height: 200px;
+    
+  }
+  
+  .box1 {
+    align-self: stretch;
+  }
+  
+  .box2 {
+    align-self: flex-start;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+
+
+#footer{
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-emphasis: initial;
+}
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: orange;
+  }
