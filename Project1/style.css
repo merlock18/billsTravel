@@ -37,39 +37,57 @@ td {
 
 .left{
   float:left;
+  width: 30%;
 }
 
 .right{
   float:right;
+  width: 70%;
 }
 
 body{
   background-color: aqua;
 }
 
-figure {
-  text-align: right;
-  font-style: italic;
-  font-size: smaller;
-  text-indent: 0;
-  padding-bottom: 25px;
-}
-
-.triplayout{
+.tripbox{
   border:2px solid black;
-  padding-top: 15px;
-  padding-bottom: 15px;
   color: white;
   background-color: pink;
   display: inline-block;
+  padding: 50px;
+}
+
+.tripdesign{
+  display: inline-block;
+}
+
+.tripdesign > figure {
+  width: 30%;
+  display: inline;
+}
+
+.tripdesign > figure > img {
+  width: 100%;
+}
+
+.tripdesign > figure > figcaption {
+  text-align: left;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  color: red;
+}
+
+.tripdesign > p {
+  color: black;
 }
 
 
-.triplayout img{
+.triplayout > img{
   height:auto;
   padding-right: 50px;
   width: 25%;
-  display: inline-flex;
+  display: inline;
 }
 
 
