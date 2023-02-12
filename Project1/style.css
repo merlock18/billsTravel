@@ -21,19 +21,51 @@ td {
     width:100%;
 }
 
+.header{
+  width : 100%;
+  display: inline-block;
+  border-top: 2px solid gray;
+
+  border-bottom: 2px solid gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
 .image_icon_left{
-    width:50px;
+    width:80px;
     height:auto;
-    display: inline;
-    text-align: left;
+    float: left;
 }
 
 .image_icon_right{
-  width:50px;
+  width:80px;
   height:auto;
-  display: flexbox;
-  fl
+  float: right;
+}
+
+body{
+  background-color: aqua;
+}
+
+.triplayout{
+  border:2px solid black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+.triplayout > img{
+  display: inline-block;
+  width:30%;
+  height:150px;
+  float: left;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.triplayout > p{
+  width : 60%;
+  float:left;
 }
 
 .wrapper {
