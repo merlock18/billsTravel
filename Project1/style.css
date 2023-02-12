@@ -180,3 +180,38 @@ nav > ul > li > a {
 nav > ul > li > a:hover {
   background-color: orange;
 }
+
+.column {
+  width: 30%;
+  border:2px solid black;
+}
+
+.column > img {
+  width:100%;
+}
+
+/* Clear floats after the columns */
+.row {
+  display: inline-block;
+  padding: 30px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.grid-item {
+  border: 1px solid rgba(4, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-item > img {
+  width: 100%;
+}
+
+.grid-item > p {
+  font-size: medium;
+}
