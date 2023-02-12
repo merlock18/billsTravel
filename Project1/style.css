@@ -1,13 +1,14 @@
-table, th, td {
-    border: 2px solid rgb(233, 230, 230);
+table {
+    border: 2px solid black;
     text-align: center;
 }
 th {
-    background-color: yellow;
+    background-color: lightgreen;
 }
-td {
+.pink {
     background-color: lightpink;
 }
+
 .column {
     float: left;
     width: 30%;
@@ -37,24 +38,25 @@ td {
 
 .left{
   float:left;
-  width: 30%;
 }
 
 .right{
   float:right;
-  width: 70%;
 }
 
+/*
 body{
   background-color: aqua;
 }
+*/
+
 
 .tripbox{
   border:2px solid black;
   color: white;
   background-color: pink;
   display: inline-block;
-  padding: 50px;
+  padding: 30px;
 }
 
 .tripdesign{
@@ -75,19 +77,14 @@ body{
   font-style: italic;
   font-size: smaller;
   text-indent: 0;
-  color: red;
 }
 
-.tripdesign > p {
-  color: black;
-}
-
-
-.triplayout > img{
-  height:auto;
-  padding-right: 50px;
+.picture > img{
   width: 25%;
-  display: inline;
+}
+
+.indent {
+  margin-left:25px
 }
 
 
@@ -140,14 +137,16 @@ body{
     align-self: flex-start;
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
+dd img{
+  width:40px;
+}
 
+dd a{
+  margin-left:15px;
+  position: relative;
+  top:-15px;
+  font-size: small;
+}
 
 
 #footer{
@@ -157,19 +156,27 @@ body{
   margin-right: auto;
   text-emphasis: initial;
 }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: orange;
-  }
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav > ul li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  background-color: orange;
+}
