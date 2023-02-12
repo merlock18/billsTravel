@@ -1,82 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-</style>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="Learn HTML">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h3>Contact Form</h3>
 
-<div class="container">
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<div class="grid-contact">
+    <div class="grid-info left">
+      <br/>
+      <br/>
+      <p class="indent">Fan? Drop a note.</p>
+      <dl>
+          <dd><img src="https://cdn-icons-png.flaticon.com/512/3654/3654978.png"> <a>New York City, US</a></dd>
+          <dd><img src="images/logos/phone.png"> <a href="tel:800-999-999">1(800)-999-9999 </a> </dd>
+          <dd><img src="images/logos/email.png"> <a href="mailto:bill@billtravel.com">Email to: Bill Travel</a> </dd>
+        
+      </dl>
+    </div>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
+    <div class="grid-info left">
+          <h4>Contact</h4>
+          <p> <em>We love our fans!</em></p>
+          <form action="index.html">
+            <input type="text" id="name" name="name" placeholder="Your name..">
+            <input type="text" id="email" name="email" placeholder="You email name.."> 
+            <br/>
+            <textarea style="width:90%; height:150px;">
+            Write your comment something..
+            </textarea>
+            <br/>
+            <input type="submit" value="Send" style="float: right; margin-right: 5%;">
+          </form>
+      </div>
+    </div>
 </div>
-<figure>
-    <img src="images/logos/phone.png" width="50px" alt="" align="center">
-    &nbsp;1(800)999-9999
-    <br/>
-    <img src="images/logos/email.png" width="50px" alt="">
 
-</figure>
-
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-</div>
 </body>
 </html>

@@ -183,11 +183,6 @@ nav > ul > li > a:hover {
 
 .column {
   width: 30%;
-  border:2px solid black;
-}
-
-.column > img {
-  width:100%;
 }
 
 /* Clear floats after the columns */
@@ -214,4 +209,26 @@ nav > ul > li > a:hover {
 
 .grid-item > p {
   font-size: medium;
+}
+
+.grid-contact {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 30% 65%;
+}
+
+.grid-info {
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-info > p {
+  font-size: medium;
+}
+
+input[type=text] {
+  width: 45%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
