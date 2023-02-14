@@ -43,7 +43,7 @@ body {
 
   .hours {
     background-image: url(images/hand.png);
-    background: white center;
+    background-color: blue;
     height: 40%;
     left: 48.75%;
     position: absolute;
@@ -91,6 +91,17 @@ body {
     animation: rotate 100s infinite linear;
   }
 
+.textbox{
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  right:10px;
+  bottom: 20px;;
+  width: 20%;
+  opacity: .5;
+}  
 
 
 #footer{
@@ -99,4 +110,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-emphasis: initial;
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+}
+
+#footer:hover{
+  color:white;
 }
