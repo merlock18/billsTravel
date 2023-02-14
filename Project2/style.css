@@ -9,14 +9,17 @@ body {
 
 .clock {
     border-radius: 50%;
-    background: rgba(255, 165, 0, 0.73) url(images/clockimage.png) no-repeat center;
+    background: rgba(255, 165, 0, 0.5) url("images/clockimage.png") no-repeat center;
     background-size: 100%;
-    height: 20em;
-    opacity: .1;
+    height: 10em;
     position: relative;
-    width: 20em;
+    width: 10em;
   }
   
+  .clock:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 1);
+  }
+
   .clock.simple:after {
     background: #000;
     border-radius: 50%;
@@ -39,25 +42,29 @@ body {
   }
 
   .hours {
-    background: #fff url(images/hand.png) no-repeat center;
-    height: 20%;
+    background-image: url(images/hand.png);
+    background: white center;
+    height: 40%;
     left: 48.75%;
     position: absolute;
-    top: 30%;
-    transform-origin: 50% 100%;
-    width: 2.5%;
+    rotate: 45;
+    top: 10%;
+    transform: 50% 100%;
+    width: 3%;
   }
 
   .minutes {
-    background: #000;
+    background: url("images/hand.png") no-repeat center;
     height: 40%;
     left: 49%;
     position: absolute;
     top: 10%;
     transform-origin: 50% 100%;
     width: 2%;
+
   }
 
+  /*
   .seconds {
     background: #000;
     height: 45%;
@@ -68,6 +75,7 @@ body {
     width: 1%;
     z-index: 7;
   }
+*/
 
   @keyframes rotate {
     100% {
@@ -78,12 +86,11 @@ body {
   .hours-container {
     animation: rotate 43200s infinite linear;
   }
+
   .minutes-container {
-    animation: rotate 20s infinite linear;
+    animation: rotate 100s infinite linear;
   }
-  .seconds-container {
-    animation: rotate 60s infinite linear;
-  }
+
 
 
 #footer{
