@@ -23,10 +23,13 @@ img {
   position: relative;
   top:25px;
   left:32px;
+  opacity: .25;
 }
 
 #clock:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 1);
+  background-color: aqua;
+  border-radius: 50%;
+  opacity: .6;
 }
 
 #minute{
