@@ -6,116 +6,89 @@ body {
 
 }
 
+img {
+  width: 54%;
+  height: 12%;
+  position: absolute;
+  top: 65px;
+  left: 70px;
 
-.clock {
-    border-radius: 50%;
-    background: rgba(255, 165, 0, 0.5) url("images/clockimage.png") no-repeat center;
-    background-size: 100%;
-    height: 10em;
-    position: relative;
-    width: 10em;
-  }
-  
-  .clock:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 1);
-  }
+}
 
-  .clock.simple:after {
-    background: #000;
-    border-radius: 50%;
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 5%;
-    height: 5%;
-    z-index: 10;
-  }
+#clock {
+  background-image: url(images/clockimage.png);
+  width: 150px;
+  height: 150px;
+  background-size: 150px 150px;
+  position: relative;
+  top:25px;
+  left:32px;
+}
 
-  .minutes-container, .hours-container, .seconds-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+#clock:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 1);
+}
 
-  .hours {
-    background-image: url(images/hand.png);
-    background-color: blue;
-    height: 40%;
-    left: 48.75%;
-    position: absolute;
-    rotate: 45;
-    top: 10%;
-    transform: 50% 100%;
-    width: 3%;
-  }
+#minute{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
 
-  .minutes {
-    background: url("images/hand.png") no-repeat center;
-    height: 40%;
-    left: 49%;
-    position: absolute;
-    top: 10%;
-    transform-origin: 50% 100%;
-    width: 2%;
+#hour{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 75%;
+  height: 100%;
+}
 
-  }
 
-  /*
-  .seconds {
-    background: #000;
-    height: 45%;
-    left: 49.5%;
-    position: absolute;
-    top: 10%;
-    transform-origin: 40% 60%;
-    width: 1%;
-    z-index: 7;
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
   }
-*/
+}
 
-  @keyframes rotate {
-    100% {
-      transform: rotateZ(360deg);
-    }
-  }
 
-  .hours-container {
-    animation: rotate 43200s infinite linear;
-  }
+#hour {
+  animation: rotate 43200s infinite linear;
+}
 
-  .minutes-container {
-    animation: rotate 100s infinite linear;
-  }
+#minute {
+  animation: rotate 100s infinite linear;
+}
 
 .textbox{
-
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  position: fixed;
-  right:10px;
-  bottom: 20px;;
-  width: 20%;
-  opacity: .5;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+position: fixed;
+right: 20px;
+bottom: 30px;;
+width: 20%;
+opacity: .5;
 }  
+
+.textbox:hover{
+  transition: margin-right 2s;
+}
 
 
 #footer{
-    display: table;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-emphasis: initial;
-    position: fixed;
-    left:0;
-    bottom:0;
-    width: 100%;
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-emphasis: initial;
+  position: fixed;
+  left:0;
+  bottom:0;
+  width: 100%;
 }
 
 #footer:hover{
-  color:white;
+color:white;
 }
