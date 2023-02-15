@@ -1,3 +1,45 @@
-test{
-    color: red;
+#icon{
+    width: 10%;
+}
+
+.pink{
+    color: white;
+    background-color: pink;
+
+}
+
+.bgblue{
+    background-color: rgba(42, 178, 201, 0.5);
+
+}
+
+.bggreen{
+    background-color: rgba(33, 169, 58, 0.687);
+}
+
+.fitlayout{
+    margin: 5%; 
+    padding: 10%;
+}
+
+.top-buffer{
+    margin-top:50px;
+}
+
+.footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-emphasis: initial;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    color: lightblue;
+    
+}
+
+.footer:hover{
+color: black;
 }
