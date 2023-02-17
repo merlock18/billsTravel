@@ -21,7 +21,7 @@
     text-align: center;
 }
 .modal-content img {
-    max-width: 100%;
+    max-width: 80%;
     margin-bottom: 20px;
 }
 
@@ -47,9 +47,11 @@
     margin-bottom: 10px;
 }
 
+
+
 @media only screen and (min-width: 768px) {
     .column {
-        width: calc(50% - 10px);
+        width: calc(60% - 10px);
         margin-bottom: 0;
     }
     .row::after {
@@ -60,12 +62,38 @@
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #33333300;
     color: #110edf;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    border-style: solid;
+    border-color: #444;
+
 }
 .btn:hover {
     background-color: #444;
+}
+
+.footer{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-emphasis: initial;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    color: lightblue;
+}
+
+.footer:hover{
+color: black;
+}
+
+.imgfit{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
