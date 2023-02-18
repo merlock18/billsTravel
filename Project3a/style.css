@@ -39,11 +39,11 @@
   }
 
   #modal1 {
-    background-color: rgba(27, 85, 219, 0.675);
+    background-color: rgba(27, 85, 219, 0.5);
   }
 
   #modal2 {
-    background-color: rgba(30, 242, 38, 0.675);
+    background-color: rgba(4, 140, 9, 0.5);
   }
 
 .modal-wrapper {
@@ -73,6 +73,15 @@ h2 {
     
 }
 
+.orangebg {
+    background-color: rgb(244, 163, 23);
+}
+
+.bluebg {
+    background-color: lightblue;
+}
+
+
 .modal-content {
     position: fixed;
     top: 50%;
@@ -80,7 +89,7 @@ h2 {
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 500px;
-    background-color: rgb(244, 163, 23);
+
     box-shadow: 0 0 10px rgba(12, 134, 227, 0.872);
     text-align: center;
 }
@@ -140,7 +149,7 @@ h2 {
     border-radius: 5%;
     border-style: solid;
     border-color: #444;
-
+    margin-bottom: 10px;
 }
 .btn:hover {
     background-color: #444;
