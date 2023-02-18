@@ -1,13 +1,15 @@
 .grid-container {
     display: grid;
-    gap: 5px;
     grid-template-columns: 45% 45%;
-    padding: 2em;
     grid-column-gap: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
   }
   
   .grid-item {
-    border: 1px solid rgba(4, 0, 0, 0.8);
+    border: 2px solid rgb(226, 90, 11);
+    border-radius: 5%;
     font-size: 30px;
     text-align: center;
   }
@@ -15,10 +17,25 @@
   .grid-item > img {
     width: 80%;
     margin: 10%;
+    position: relative;
+    font-size: medium;
   }
   
   .grid-item > p {
     font-size: medium;
+    margin: 10%;
+    position: relative;
+    bottom: 10%;
+  }
+
+  .grid-item > a {
+    font-size: medium;
+    margin: 10%;
+    position: relative;
+    bottom: 10%;
+    border-radius: 15%;
+    background-color: #ea6d0e;
+    color: white;
   }
 
 .modal-wrapper {
@@ -88,12 +105,9 @@
     background-color: #33333300;
     color: #110edf;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 5%;
     border-style: solid;
     border-color: #444;
-    width:20%;
-    left: 10px;
 
 }
 .btn:hover {
