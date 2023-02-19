@@ -1,40 +1,60 @@
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: lightgoldenrodyellow;
+  padding-left: 5%;
+}
+  
+ 
+  .rowTop {
+    display: float;
+    width: 100%;
+    overflow: hidden;
+    height: 10%;
+  }
+
+  
+  .col-image {
+    animation: scale-down 8s infinite;
+    animation-delay: 1s;
+    position: relative;
+    left: 0;
+    top: 5px;
+    border-radius: 15%;
+    border: 2px solid rgb(217, 214, 24);
+    float: left;
+    width: 15%;
+    margin: 10px;
+  }
+
+  .col-image > img {
+    width: 100%;
+  }
+
+  .col-content {
+    width: 70%;
+    font-size: medium;
+    float:left;
   }
   
-  .image-container {
-    flex: 1;
-    max-width: 50%;
-    animation: scale-down 4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  .col-content h1 {
+    animation: move-up 10s  infinite alternate forwards;
+    font-family: "Apple Chancery", cursive;
+    color: rgb(110, 153, 16);
   }
   
+  .col-content h4 {
+    animation: move-down 10s infinite alternate ;
+    animation-delay: 1s;
+    color: rgb(101, 101, 94);
+  }
+
+
   @keyframes scale-down {
     from { transform: scale(1); }
-    to { transform: scale(0.5); }
+    to { transform: scale(.5); }
   }
   
-  .text-container {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .text-container h1 {
-    animation: move-up 6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate forwards;
-    animation-delay: 1s;
-  }
-  
-  .text-container h2 {
-    animation: move-down 6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate forwards;
-    animation-delay: 1s;
-  }
-  
+ 
   @keyframes move-up {
     from { transform: translateY(100px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -44,63 +64,46 @@
     from { transform: translateY(-100px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
   }
-  
-  .carousel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: carousel 6s linear infinite;
-  }
-  
-  .carousel-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .carousel-item {
+
+  .rowText {
     width: 100%;
+    height: 55px;
+    background-color: #91af0e;
+    display: float;
+  }
+
+.coltext{
+  width: 95%;
+  float: left;
+  background-color: rgb(191, 173, 14);
+  }
+
+  .textbg {
     text-align: center;
-    animation: carousel-item 2s linear infinite;
   }
-  
-  .carousel-item:nth-of-type(1) {
-    animation-delay: 0s;
-  }
-  
-  .carousel-item:nth-of-type(2) {
-    animation-delay: 2s;
-  }
-  
-  .carousel-item:nth-of-type(3) {
-    animation-delay: 4s;
-  }
-  
-  @keyframes carousel {
+
+  span::before {
+    content: "$5.99 INTO THE NIGHT BODY CARE";
+    animation: animate infinite 12s;
+    padding-left: 10px;
+    animation-timing-function: ease-in-out;
+    font-size: larger;
+}
+
+@keyframes animate {
+
     0% {
-      transform: translateX(0);
+        content: "$5.99 INTO THE NIGHT BODY CARE";
     }
+
+    50% {
+        content: "$7.50 Organic rice milk body cream";
+    }
+
     100% {
-      transform: translateX(-200%);
+        content: "$7.50 Himalaya Honey Body Cream";
     }
-  }
-  
-  @keyframes carousel-item {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
+}
   
 #icon{
     width: 10%;
