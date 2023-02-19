@@ -1,0 +1,25 @@
+span::before {
+    content: "change text value";
+    animation: animate infinite 10s;
+    padding-left: 10px;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Geeks";
+    }
+
+    50% {
+        content: "for";
+    }
+
+    75% {
+        content: "animations";
+    }
+    100% {
+        content: "GeeksforGeeks";
+    }
+}

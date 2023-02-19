@@ -1,29 +1,109 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image-container {
+    flex: 1;
+    max-width: 50%;
+    animation: scale-down 4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+  
+  @keyframes scale-down {
+    from { transform: scale(1); }
+    to { transform: scale(0.5); }
+  }
+  
+  .text-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-container h1 {
+    animation: move-up 6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate forwards;
+    animation-delay: 1s;
+  }
+  
+  .text-container h2 {
+    animation: move-down 6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes move-up {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes move-down {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: carousel 6s linear infinite;
+  }
+  
+  .carousel-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    text-align: center;
+    animation: carousel-item 2s linear infinite;
+  }
+  
+  .carousel-item:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  
+  .carousel-item:nth-of-type(2) {
+    animation-delay: 2s;
+  }
+  
+  .carousel-item:nth-of-type(3) {
+    animation-delay: 4s;
+  }
+  
+  @keyframes carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+  
+  @keyframes carousel-item {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
 #icon{
     width: 10%;
-}
-
-.pink{
-    color: white;
-    background-color: pink;
-
-}
-
-.bgblue{
-    background-color: rgba(42, 178, 201, 0.5);
-
-}
-
-.bggreen{
-    background-color: rgba(33, 169, 58, 0.687);
-}
-
-.fitlayout{
-    margin: 5%; 
-    padding: 10%;
-}
-
-.top-buffer{
-    margin-top:50px;
 }
 
 .footer{
