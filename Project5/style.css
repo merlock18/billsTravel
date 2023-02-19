@@ -104,6 +104,15 @@
         content: "$7.50 Himalaya Honey Body Cream";
     }
 }
+
+.topPic{
+  
+}
+
+.topPic > img{
+  width: 90%;
+  height: 400px;
+}
   
 #icon{
     width: 10%;
