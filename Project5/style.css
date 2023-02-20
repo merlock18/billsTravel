@@ -155,14 +155,15 @@ span::before {
 }
 
 .midPicContainer {
-  display: float;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 45%;
   height: 300px;
+  grid-column-gap: 5%;
 }
 
 .midPic {
-  width: 50%;
-  max-width: 90%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .midPic>img {
@@ -207,15 +208,13 @@ span::before {
 
 
 .floatleft {
-  float: left;
-  width: 50%;
+  width: 100%;
   overflow: hidden;
 
 }
 
 .floatright {
-  width: 40%;
-  float: right;
+  width: 90%;
   height: 245px;
   position: relative;
   top: 20px;
@@ -228,15 +227,14 @@ span::before {
   padding-right: 40px;
   color: grey;
   background-image: linear-gradient(45deg, #cacdc2, #afdc0c);
+
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 33% 33% 33%;
   grid-column-gap: 50px;
-  margin-left: 5%;
-  margin-right: 5%;
-  
+
 }
 
 .grid-item {
