@@ -9,7 +9,7 @@
     display: float;
     width: 100%;
     overflow: hidden;
-    height: 10%;
+    height: 120px;
   }
 
   
@@ -22,7 +22,7 @@
     border-radius: 15%;
     border: 2px solid rgb(217, 214, 24);
     float: left;
-    width: 15%;
+    width: 100px;
     margin: 10px;
   }
 
@@ -56,12 +56,12 @@
   
  
   @keyframes move-up {
-    from { transform: translateY(100px); opacity: 0; }
+    from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
   }
   
   @keyframes move-down {
-    from { transform: translateY(-100px); opacity: 0; }
+    from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
   }
 
