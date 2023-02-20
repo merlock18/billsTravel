@@ -273,10 +273,10 @@
 }
 
 
-.grid-item > a {
+.grid-item>a{
   font-size: medium;
   border-radius: 15%;
-  background-color: rgb(147, 144, 144);
+  background-color: rgb(20, 19, 19);
   color: white;
 }
 
@@ -373,13 +373,6 @@ h2 {
   font-size: medium;
 }
 
-
-.grid-item > a {
-  font-size: medium;
-  border-radius: 15%;
-  background-color: rgb(147, 144, 144);
-  color: white;
-}
 
 .row::after {
   content: "";
