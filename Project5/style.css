@@ -70,6 +70,7 @@
     height: 55px;
     background-color: #91af0e;
     display: float;
+    overflow: hidden;
   }
 
 .coltext{
@@ -94,25 +95,38 @@
 
     0% {
         content: "$5.99 INTO THE NIGHT BODY CARE";
+        color: rgb(96, 18, 93);
     }
 
     50% {
         content: "$7.50 Organic rice milk body cream";
+        color: rgb(13, 113, 51);
     }
 
     100% {
         content: "$7.50 Himalaya Honey Body Cream";
+        color: rgb(15, 63, 193);
     }
 }
 
-.topPic{
-  
+.topPicContainer{
+  background-color: blue;
+  height: 300px;
 }
 
 .topPic > img{
-  width: 90%;
-  height: 400px;
+  width: 50%;
+  position: relative;
+  left: 25%;
+
+
 }
+
+.topPic > p {
+  display: inline;
+}
+
+
   
 #icon{
     width: 10%;
