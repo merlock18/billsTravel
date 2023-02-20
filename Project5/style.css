@@ -1,143 +1,227 @@
-
 .container {
   background-color: lightgoldenrodyellow;
   padding-left: 5%;
 }
-  
- 
-  .rowTop {
-    display: float;
-    width: 100%;
-    overflow: hidden;
-    height: 120px;
-  }
-
-  
-  .col-image {
-    animation: scale-down 8s infinite;
-    animation-delay: 1s;
-    position: relative;
-    left: 0;
-    top: 5px;
-    border-radius: 15%;
-    border: 2px solid rgb(217, 214, 24);
-    float: left;
-    width: 100px;
-    margin: 10px;
-  }
-
-  .col-image > img {
-    width: 100%;
-  }
-
-  .col-content {
-    width: 70%;
-    font-size: medium;
-    float:left;
-  }
-  
-  .col-content h1 {
-    animation: move-up 10s  infinite alternate forwards;
-    font-family: "Apple Chancery", cursive;
-    color: rgb(110, 153, 16);
-  }
-  
-  .col-content h4 {
-    animation: move-down 10s infinite alternate ;
-    animation-delay: 1s;
-    color: rgb(101, 101, 94);
-  }
 
 
-  @keyframes scale-down {
-    from { transform: scale(1); }
-    to { transform: scale(.5); }
-  }
-  
- 
-  @keyframes move-up {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  
-  @keyframes move-down {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+.rowTop {
+  display: float;
+  width: 100%;
+  overflow: hidden;
+  height: 120px;
+}
+
+
+.col-image {
+  animation: scale-down 8s infinite;
+  animation-delay: 1s;
+  position: relative;
+  left: 0;
+  top: 5px;
+  border-radius: 15%;
+  border: 2px solid rgb(217, 214, 24);
+  float: left;
+  width: 100px;
+  margin: 10px;
+}
+
+.col-image>img {
+  width: 100%;
+}
+
+.col-content {
+  width: 70%;
+  font-size: medium;
+  float: left;
+}
+
+.col-content h1 {
+  animation: move-up 10s infinite alternate forwards;
+  font-family: "Apple Chancery", cursive;
+  color: rgb(110, 153, 16);
+}
+
+.col-content h4 {
+  animation: move-down 10s infinite alternate;
+  animation-delay: 1s;
+  color: rgb(101, 101, 94);
+}
+
+
+@keyframes scale-down {
+  from {
+    transform: scale(1);
   }
 
-  .rowText {
-    width: 100%;
-    height: 55px;
-    background-color: #91af0e;
-    display: float;
-    overflow: hidden;
+  to {
+    transform: scale(.5);
+  }
+}
+
+
+@keyframes move-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
 
-.coltext{
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rowText {
+  width: 100%;
+  height: 55px;
+  background-color: #91af0e;
+  display: float;
+  overflow: hidden;
+}
+
+.coltext {
   width: 95%;
   float: left;
   background-color: rgb(191, 173, 14);
-  }
+}
 
-  .textbg {
-    text-align: center;
-  }
+.textbg {
+  text-align: center;
+}
 
-  span::before {
-    content: "$5.99 INTO THE NIGHT BODY CARE";
-    animation: animate infinite 12s;
-    padding-left: 10px;
-    animation-timing-function: ease-in-out;
-    font-size: larger;
+span::before {
+  content: "$5.99 INTO THE NIGHT BODY CARE";
+  animation: animate infinite 12s;
+  padding-left: 10px;
+  animation-timing-function: ease-in-out;
+  font-size: larger;
 }
 
 @keyframes animate {
 
-    0% {
-        content: "$5.99 INTO THE NIGHT BODY CARE";
-        color: rgb(96, 18, 93);
-    }
+  0% {
+    content: "$5.99 INTO THE NIGHT BODY CARE";
+    color: rgb(96, 18, 93);
+  }
 
-    50% {
-        content: "$7.50 Organic rice milk body cream";
-        color: rgb(13, 113, 51);
-    }
+  50% {
+    content: "$7.50 Organic rice milk body cream";
+    color: rgb(13, 113, 51);
+  }
 
-    100% {
-        content: "$7.50 Himalaya Honey Body Cream";
-        color: rgb(15, 63, 193);
-    }
+  100% {
+    content: "$7.50 Himalaya Honey Body Cream";
+    color: rgb(15, 63, 193);
+  }
 }
 
-.topPicContainer{
-  background-color: blue;
-  height: 300px;
+.topPicContainer {
+  height: 500px;
   overflow: hidden;
 }
 
-.topPic > img{
+.topPic>img {
   max-width: 100%;
   width: 100%;
-  height: 300px
-
+  height: 500px
 }
 
-.topPic > p {
+.topPic>p {
   color: white;
   position: relative;
-  top: -300px;
-  left: 10px;
+  top: -400px;
+  left: 20px;
   margin-inline: 5% 10%;
-  margin-inline-start: 5px;
-  margin-inline-end: 500px;
+  margin-inline-start: 50px;
+  margin-inline-end: 200px;
   padding: 3%;
   border: 2px solid white;
   background-color: gray;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.midPicContainer {
+  display: float;
+  width: 100%;
+  height: 300px;
+}
+
+.midPic {
+  width: 50%;
+  max-width: 90%;
+}
+
+.midPic>img {
+
+  opacity: .7;
+  width: 90%;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  max-width: 100%;
+  height: 280px;
+}
+
+.midPic img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  background: -moz-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+  
+}
+
+.midPic > p {
+  color:white;
+  position: relative;
+  top: -200px;
+  left: 10px;
+  margin-inline: 10% 5%;
+  margin-inline-start: 50px;
+  margin-inline-end: 200px;
+  font-size: medium;
+  max-width: 200px;
+  max-height: 100px;
+  padding: 3%;
+  border: 2px solid rgb(26, 154, 26);
+  opacity: 1;
+  overflow: hidden;
+ 
+}
+
+.floatleft {
+  float: left;
+  width: 50%;
+
+  overflow: hidden;
+}
+
+.floatright {
+  float: right;
+  width: 50%;
+
+  overflow: hidden;
+}
+
+.floatright > h4, p {
 
 }
 
-
-  
 #icon{
     width: 10%;
 }
