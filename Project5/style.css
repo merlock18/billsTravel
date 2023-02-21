@@ -524,18 +524,43 @@ nav > ul > li > a:hover {
   margin: 0;
 }
 
+.socialDescription{
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 100px;
+}
+
+.socialDescription > p{
+  padding-right: 25px;
+}
+
+.socialMedia {
+  width: 95%;
+  height: 85px;
+}
+
+.socialMedia > a >img {
+  display: float;
+  float: right;
+  width: 25px;
+  padding: 5px;
+}
+
 .footer{
     display: table;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     text-emphasis: initial;
-
+    font-size: x-small;
     width: 100%;
     color: lightblue;
     
 }
 
 .footer:hover{
-color: black;
+color: white;
+font-size: large;
 }
