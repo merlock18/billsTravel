@@ -548,6 +548,10 @@ nav > ul > li > a:hover {
   padding: 5px;
 }
 
+.socialMedia > a > img:hover{
+  background-color: orange;
+}
+
 .footer{
     display: table;
     text-align: center;
@@ -562,5 +566,5 @@ nav > ul > li > a:hover {
 
 .footer:hover{
 color: white;
-font-size: large;
+font-size: medium;
 }
