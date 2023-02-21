@@ -281,7 +281,7 @@
 }
 
 #modal1 {
-
+  background-color: rgba(44, 48, 44, 0.5);
 }
 
 #modal2 {
@@ -373,6 +373,25 @@ h2 {
   font-size: medium;
 }
 
+.modal-bottom{
+  background-color: grey;
+
+}
+
+.modal-bottom > p{
+  background-color: grey;
+
+}
+
+.modal-btn{
+  padding: 10px 20px;
+  border-radius: 5%;
+  border: 2px solid white;
+  background-color: rgb(228, 226, 226);
+  opacity: 1;
+  color: black;
+  text-align: left;
+}
 
 .row::after {
   content: "";
