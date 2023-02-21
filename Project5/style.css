@@ -490,15 +490,47 @@ h2 {
     width: 10%;
 }
 
+.bottomSection{
+  background-color: black;
+}
+
+nav > ul li {
+  float: left;
+}
+
+nav > ul > li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size:medium;
+}
+
+nav > ul > li > a:hover {
+  background-color: orange;
+}
+
+.menuColumn{
+  width: 25%;
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: -22px;
+}
+.menuDescription{
+  color: white;
+  font-size: x-small;
+  margin: 0;
+}
+
 .footer{
     display: table;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     text-emphasis: initial;
-    position: fixed;
-    left:0;
-    bottom: 0;
+
     width: 100%;
     color: lightblue;
     
