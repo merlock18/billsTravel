@@ -6,7 +6,7 @@
   <meta name="author" content="Billy Lee" />
   <meta name="description" content="Learn JavaScript" />
   <title>Project 3</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 
   <head>
     <title>Bill's Helper</title>
@@ -17,32 +17,45 @@
   <body>
     <!-- BMI comparison -->
     <div>
-      <div>
-        <h2>Person 1</h2>
-        <label for="feet1">Height (in feet):</label>
-        <input type="number" id="feet1" />
-        <label for="inches1">Height (in inches):</label>
-        <input type="number" id="inches1" />
-        <label for="weight1">Weight (in lbs):</label>
-        <input type="number" id="weight1" />
-        <button onclick="calculateBMI()">Calculate BMI</button>
+      <h1>BMI Calculator and Temperature Converter</h1>
+
+      <div class="tool-container">
+        <h2>BMI Calculator</h2>
+        <p>
+          Enter the weight and height of two persons to calculate their BMI:
+        </p>
+
+        <div>
+          <label for="weight1">Person 1 Weight (lbs): </label>
+          <input type="number" id="weight1" />
+          <label for="height1">Person 1 Height (ft): </label>
+          <input type="number" id="height1" />
+          <button onclick="calculateBMI()">Calculate BMI</button>
+          <p id="bmi-result-1"></p>
+        </div>
+
+        <div>
+          <label for="weight2">Person 2 Weight (lbs): </label>
+          <input type="number" id="weight2" />
+          <label for="height2">Person 2 Height (ft): </label>
+          <input type="number" id="height2" />
+          <button onclick="calculateBMI()">Calculate BMI</button>
+          <p id="bmi-result-2"></p>
+        </div>
+
+        <p id="comparison-result"></p>
       </div>
 
-      <div>
-        <h2>Person 2</h2>
-        <label for="feet2">Height (in feet):</label>
-        <input type="number" id="feet2" />
-        <label for="inches2">Height (in inches):</label>
-        <input type="number" id="inches2" />
-        <label for="weight2">Weight (in lbs):</label>
-        <input type="number" id="weight2" />
-        <button onclick="calculateBMI()">Calculate BMI</button>
-      </div>
-      <!-- Temperature conversation -->
-      <div>
-        <label for="celsius">Celsius:</label>
-        <input type="number" id="celsius" />
-        <button onclick="convert()">Convert</button>
+      <div class="tool-container">
+        <h2>Temperature Converter</h2>
+        <p>Enter a temperature in Celsius to convert it to Fahrenheit:</p>
+
+        <div>
+          <label for="celsius">Celsius: </label>
+          <input type="number" id="celsius" />
+          <button onclick="convertTemperature()">Convert</button>
+          <p id="fahrenheit-result"></p>
+        </div>
       </div>
     </div>
   </body>
