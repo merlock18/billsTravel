@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Billy Lee" />
+  <meta name="description" content="Learn JavaScript" />
+  <title>Project 3</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <head>
+    <title>Bill's Helper</title>
+    <!-- Bootstrap CSS -->
+    <script src="assignment.js"></script>
+  </head>
+
+  <body>
+    <!-- BMI comparison -->
+    <div>
+      <div>
+        <h2>Person 1</h2>
+        <label for="feet1">Height (in feet):</label>
+        <input type="number" id="feet1" />
+        <label for="inches1">Height (in inches):</label>
+        <input type="number" id="inches1" />
+        <label for="weight1">Weight (in lbs):</label>
+        <input type="number" id="weight1" />
+        <button onclick="calculateBMI()">Calculate BMI</button>
+      </div>
+
+      <div>
+        <h2>Person 2</h2>
+        <label for="feet2">Height (in feet):</label>
+        <input type="number" id="feet2" />
+        <label for="inches2">Height (in inches):</label>
+        <input type="number" id="inches2" />
+        <label for="weight2">Weight (in lbs):</label>
+        <input type="number" id="weight2" />
+        <button onclick="calculateBMI()">Calculate BMI</button>
+      </div>
+      <!-- Temperature conversation -->
+      <div>
+        <label for="celsius">Celsius:</label>
+        <input type="number" id="celsius" />
+        <button onclick="convert()">Convert</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+.tool-container {
+  margin: 20px auto;
+  max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  animation: fadein 2s;
+}
+
+.tool-container h2 {
+  margin-top: 0;
+}
+
+.tool-container input {
+  width: 100px;
+}
+
+.tool-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.tool-container button:hover {
+  background-color: #3e8e41;
+}
+
+.tool-container p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
