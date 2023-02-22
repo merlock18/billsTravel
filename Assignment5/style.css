@@ -1,45 +1,63 @@
-.tool-container {
-  margin: 20px auto;
-  max-width: 500px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  animation: fadein 2s;
+.bmi-container {
+  display: flex;
 }
 
-.tool-container h2 {
+.bmi-column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid black;
+  margin: 10px;
+  text-align: center;
+}
+
+.bmi-column label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bmi-column input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.bmi-column div:last-child {
+  margin-bottom: 0;
+}
+
+.bmi-column h3 {
   margin-top: 0;
 }
 
-.tool-container input {
-  width: 100px;
-}
-
-.tool-container button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 16px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.tool-container button:hover {
-  background-color: #3e8e41;
-}
-
-.tool-container p {
-  margin: 10px 0 0;
-  font-size: 18px;
+#p1-result,
+#p2-result {
+  margin-top: 20px;
   font-weight: bold;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 24px;
+  color: #333;
+  margin-left: 10px;
+}
+
+#celsius-result {
+  display: none;
+}
+
+#fahrenheit-result {
+  display: none;
 }

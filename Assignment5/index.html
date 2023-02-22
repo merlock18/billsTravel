@@ -17,44 +17,103 @@
   <body>
     <!-- BMI comparison -->
     <div>
-      <h1>BMI Calculator and Temperature Converter</h1>
+      <h1>Javascript BMI and Temperature Converter</h1>
 
       <div class="tool-container">
-        <h2>BMI Calculator</h2>
+        <h2>BMI Comparison</h2>
         <p>
-          Enter the weight and height of two persons to calculate their BMI:
+          Peter and Lucas BMI comparison. Enter the weight and height of each:
         </p>
 
-        <div>
-          <label for="weight1">Person 1 Weight (lbs): </label>
-          <input type="number" id="weight1" />
-          <label for="height1">Person 1 Height (ft): </label>
-          <input type="number" id="height1" />
-          <button onclick="calculateBMI()">Calculate BMI</button>
-          <p id="bmi-result-1"></p>
+        <div class="bmi-container">
+          <div class="bmi-column">
+            <h3>Peter</h3>
+            <div>
+              <label>Weight (kg):</label>
+              <input type="number" id="weight1" value="92" required />
+            </div>
+            <div>
+              <label>Height (m):</label>
+              <input type="number" id="height1" value="1.95" required />
+            </div>
+            <div id="bmi-result-1"></div>
+          </div>
+          <div class="bmi-column">
+            <h3>Lucas</h3>
+            <div>
+              <label>Weight (kg):</label>
+              <input type="number" id="weight2" value="78" required />
+            </div>
+            <div>
+              <label>Height (m):</label>
+              <input
+                type="number"
+                step="0.01"
+                id="height2"
+                value="1.69"
+                required
+              />
+            </div>
+            <div id="bmi-result-2"></div>
+          </div>
         </div>
+        <div id="comparison-result"></div>
+        <hr />
+        <button id="bmi-compare-btn" onclick="calculateBMI()">
+          Compare BMI
+        </button>
 
-        <div>
-          <label for="weight2">Person 2 Weight (lbs): </label>
-          <input type="number" id="weight2" />
-          <label for="height2">Person 2 Height (ft): </label>
-          <input type="number" id="height2" />
-          <button onclick="calculateBMI()">Calculate BMI</button>
-          <p id="bmi-result-2"></p>
-        </div>
+        <div class="tool-container">
+          <h1>Temperature Converter</h1>
+          <h2>Part B</h2>
+          <div>
+            <button type="button" onclick="TemperaturePart2()">
+              Print Conversion
+            </button>
 
-        <p id="comparison-result"></p>
-      </div>
+            <div class="result">
+              <p id="temperatureResult1"></p>
+              <p id="temperatureResult2"></p>
+            </div>
+          </div>
 
-      <div class="tool-container">
-        <h2>Temperature Converter</h2>
-        <p>Enter a temperature in Celsius to convert it to Fahrenheit:</p>
+          <h2>Part D</h2>
+          <p>Enter a temperature in Celsius to convert to Fahrenheit:</p>
+          <form>
+            <label for="celsius">Celsius:</label>
+            <input
+              type="number"
+              id="celsius"
+              placeholder="Temperature in Celsius"
+              value="100"
+            /><span>&deg;C</span><br /><br />
 
-        <div>
-          <label for="celsius">Celsius: </label>
-          <input type="number" id="celsius" />
-          <button onclick="convertTemperature()">Convert</button>
-          <p id="fahrenheit-result"></p>
+            <button type="button" onclick="CovertCelsiusToFahrenheit()">
+              Convert
+            </button>
+          </form>
+
+          <div class="result">
+            <p id="fahrenheitResult"></p>
+          </div>
+
+          <p>Enter a temperature in Fahrenheit to convert to Celsius:</p>
+          <form>
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input
+              type="number"
+              id="fahrenheit"
+              placeholder="Temperature in Fahrenheit"
+              value="10"
+            /><span>&deg;F</span><br /><br />
+
+            <button type="button" onclick="CovertFahrenheitToCelsius()">
+              Convert
+            </button>
+          </form>
+          <div class="result">
+            <p id="celsiusResult"></p>
+          </div>
         </div>
       </div>
     </div>
