@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <title>Guessing Game</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add your CSS styles here */
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Guessing Game</h1>
-      <div class="score">Current Score: <span id="current-score">10</span></div>
-      <div class="score">
-        History High Score: <span id="high-score">0</span>
-      </div>
-      <div class="message"></div>
-      <div class="input-group">
-        <label for="guess-input">Enter a number between 1 and 100:</label>
-        <input
-          type="text"
-          id="guess-input"
-          placeholder="Enter your guess here"
-        />
-        <button id="check-button">Check</button>
-        <button id="play-button">Play Again</button>
-      </div>
-      <div id="secret-number"></div>
-    </div>
+    <h1>Guessing Game</h1>
+    <p id="message">Guess a number between 1 and 100</p>
+    <input
+      type="number"
+      id="guessInput"
+      placeholder="Enter a number from 1 to 100"
+      value="5"
+    />
+    <button id="checkButton">Check</button>
+    <p>Current Score: <span id="currentScore">10</span></p>
+    <p>History High Score: <span id="highScore">0</span></p>
+    <p id="secretNumber">
+      The secret number was <span id="secretNumberValue"></span>
+    </p>
+    <button id="playButton">Play Again</button>
+
     <script src="guess.js"></script>
   </body>
 </html>
