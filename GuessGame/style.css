@@ -1,15 +1,24 @@
 .container {
-  margin: 50px auto;
-  width: 600px;
+  background-color: #0febef;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  font-family: "courier new", monospace;
 }
 
-h1 {
-  font-size: 36px;
+.header {
+}
+
+.header h2 {
+  font-size: 40px;
+  color: rgb(168, 75, 13);
+  text-shadow: pink 2px 2px;
+  padding-top: 40px;
+}
+
+.header p {
   font-weight: bold;
-  margin-bottom: 20px;
 }
-
 .score {
   font-size: 24px;
   margin-bottom: 10px;
@@ -21,7 +30,7 @@ h1 {
   color: red;
 }
 
-input[type="text"] {
+.input[type="text"] {
   font-size: 24px;
   padding: 5px 10px;
   margin-right: 10px;

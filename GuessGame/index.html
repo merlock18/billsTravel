@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Billy Lee" />
+  <meta name="description" content="Learn CSS site" />
   <head>
-    <meta charset="UTF-8" />
     <title>Guessing Game</title>
-    <style>
-      /* Add your CSS styles here */
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Guessing Game</h1>
-    <p id="message">Guess a number between 1 and 100</p>
-    <input
-      type="number"
-      id="guessInput"
-      placeholder="Enter a number from 1 to 100"
-      value="5"
-    />
-    <button id="checkButton">Check</button>
-    <p>Current Score: <span id="currentScore">10</span></p>
-    <p>History High Score: <span id="highScore">0</span></p>
-    <p id="secretNumber">
-      The secret number was <span id="secretNumberValue"></span>
-    </p>
-    <button id="playButton">Play Again</button>
-
+    <div class="container">
+      <h1>Guessing Game</h1>
+      <p id="message" class="" message>Guess a number between 1 and 100</p>
+      <input
+        type="number"
+        id="guessInput"
+        placeholder="Enter a number from 1 to 100"
+        value="5"
+      />
+      <button id="checkButton">Check</button>
+      <p>Current Score: <span id="currentScore">10</span></p>
+      <p>History High Score: <span id="highScore">0</span></p>
+      <p id="secretNumber">
+        The secret number was <span id="secretNumberValue"></span>
+      </p>
+      <button id="playButton">Play Again</button>
+    </div>
+    <!-- javascript function -->
     <script src="guess.js"></script>
   </body>
 </html>
