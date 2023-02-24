@@ -43,6 +43,11 @@
 }
 
 .columnLeft {
+  width: 50px;
+  height: 50%;
+  border: 1px solid black;
+  background-color: pink;
+  border-radius: 5%;
   float: left;
   width: 40%;
 }
@@ -50,10 +55,15 @@
 .columnRight {
   float: right;
   width: 40%;
+  width: 50px;
+  height: 50%;
+  border: 1px solid black;
+  background-color: pink;
+  border-radius: 5%;
 }
 
 .enterNumber {
-  visibility: visible;
+  display: none;
   border-radius: 50px;
   background-color: #a28159;
   width: 80%;
@@ -74,7 +84,7 @@
 }
 
 .win {
-  visibility: hidden;
+  display: none;
   position: relative;
   top: 35px;
   background-color: rgba(116, 205, 172, 0.937);
@@ -103,6 +113,7 @@
 }
 
 .loss {
+  display: none;
   padding-left: 20px;
   padding-right: 20px;
   visibility: visible;
@@ -188,4 +199,26 @@ button:hover {
   color: white;
   padding: 10px;
   border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
 }
