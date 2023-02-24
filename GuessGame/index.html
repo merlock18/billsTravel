@@ -11,21 +11,34 @@
   </head>
   <body>
     <div class="container">
-      <h1>Guessing Game</h1>
-      <p id="message" class="" message>Guess a number between 1 and 100</p>
-      <input
-        type="number"
-        id="guessInput"
-        placeholder="Enter a number from 1 to 100"
-        value="5"
-      />
-      <button id="checkButton">Check</button>
-      <p>Current Score: <span id="currentScore">10</span></p>
-      <p>History High Score: <span id="highScore">0</span></p>
-      <p id="secretNumber">
-        The secret number was <span id="secretNumberValue"></span>
-      </p>
-      <button id="playButton">Play Again</button>
+      <!-- Guessing Game Header -->
+      <div class="header">
+        <h2>Guess My Number</h2>
+        <p id="message" class="" message>Guess a number between 1 and 100</p>
+      </div>
+      <!-- Enter Main Section -->
+      <div class="main">
+        <!-- Score and Reset -->
+        <div class="score">
+          <p>Current Score: <span id="currentScore">10</span></p>
+          <p>History High Score: <span id="highScore">0</span></p>
+          <button id="playButton">Reset</button>
+        </div>
+        <div class="input">
+          <input
+            type="number"
+            id="guessInput"
+            placeholder="Enter a number from 1 to 100"
+            value="5"
+          />
+          <button id="checkButton">Check</button>
+        </div>
+        <!-- Guess history-->
+        <div class="history">
+          <p>Guess History:</p>
+          <ul id="guessHistory"></ul>
+        </div>
+      </div>
     </div>
     <!-- javascript function -->
     <script src="guess.js"></script>
