@@ -15,7 +15,8 @@
   font-size: 40px;
   color: rgb(168, 75, 13);
   text-shadow: pink 2px 2px;
-  padding-top: 20px;
+  position: relative;
+  top: 30px;
 }
 
 .header p {
@@ -27,7 +28,7 @@
 }
 
 .main {
-  background-color: #edde9c;
+  background-color: #bdf0f2;
   width: 80%;
   border-radius: 10px;
   margin-left: auto;
@@ -37,42 +38,94 @@
 }
 
 .score {
-  font-size: 24px;
+  font-size: medium;
   margin-bottom: 10px;
 }
 
+.columnLeft {
+  float: left;
+  width: 40%;
+}
+
+.columnRight {
+  float: right;
+  width: 40%;
+}
+
 .enterNumber {
+  visibility: visible;
   border-radius: 50px;
   background-color: #a28159;
   width: 80%;
-  height: 400px;
+  height: 300px;
   text-align: center;
   font-family: "courier new", monospace;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+}
+
+.enterNumber > img {
+  border: 2px solid #000;
+  border-radius: 6%;
+  margin-top: 20px;
+  width: 70px;
+  display: block;
 }
 
 .win {
-  /*  
   visibility: hidden;
-  */
+  position: relative;
+  top: 35px;
   background-color: rgba(116, 205, 172, 0.937);
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  height: 400px;
+  height: 300px;
   border-radius: 50px;
+  display: inline;
 }
 
 .win > img {
-  width: 15%;
+  border: 2px solid #000;
+  border-radius: 6%;
+  margin-top: 20px;
+  width: 70px;
+}
+
+.AgainBtn {
+  background-color: #11af39;
+  color: white;
+  font-size: small;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 10px 15px;
 }
 
 .loss {
-  visibility: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  visibility: visible;
+
+  background-color: rgb(195, 150, 137);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  border-radius: 50px;
+}
+
+.loss > img {
+  border: 2px solid #000;
+  border-radius: 6%;
+  margin-top: 20px;
+  width: 70px;
 }
 
 .history {
+  padding-top: 15px;
+  padding-left: 25px;
+  text-align: left;
   border-radius: 50px;
   width: 70%;
   margin-left: auto;
