@@ -85,7 +85,6 @@
 
 .win {
   display: none;
-  position: relative;
   top: 35px;
   background-color: rgba(116, 205, 172, 0.937);
   width: 80%;
@@ -93,10 +92,10 @@
   margin-right: auto;
   height: 300px;
   border-radius: 50px;
-  display: inline;
 }
 
 .win > img {
+  display: none;
   border: 2px solid #000;
   border-radius: 6%;
   margin-top: 20px;
