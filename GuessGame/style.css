@@ -23,7 +23,6 @@
   font-weight: bold;
 }
 
-
 .main {
   background-color: #bdf0f2;
   width: 80%;
@@ -36,51 +35,43 @@
 
 .score {
   padding: 20px;
-  font-size: medium;
-  margin-bottom: 10px;
+  height: 50px;
+  width: 95%;
 }
 
 .scoreleft {
-  width: 50%;
-  max-height: 100px;
-  height: 50%;
-  border: 1px solid black;
+  max-width: 50%;
+  width: 150px;
+  height: 50px;
   background-color: pink;
   border-radius: 5%;
   float: left;
-  width: 80%;
-  max-width: 150px;
-  display: float-left;
-
+  padding-bottom: 10px;
 }
 
 .scoreleft > p {
-  max-height:10px;
+  max-height: 10px;
   font-size: small;
   font-weight: bolder;
 }
 
-.scoreright{
-  width: 50%;
-  max-width: 100px;
-  max-height: 100px;
-  height: 80px;
+.scoreright {
+  width: 100px;
+  max-width: 50%;
 
   border-radius: 5%;
-
-  float: clear;
+  display: float-right;
 }
 
 .scoreright > button {
-  height: 40px;
-  width: 80px;
-  font-size: small;
+  height: 60px;
+  width: 150px;
+  font-size: medium;
   font-weight: bolder;
   float: right;
   background-color: pink;
   color: #000;
   float: clear;
-  
 }
 
 .enterNumber {
