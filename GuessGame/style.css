@@ -22,10 +22,7 @@
 .header p {
   font-weight: bold;
 }
-.score {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+
 
 .main {
   background-color: #bdf0f2;
@@ -38,28 +35,52 @@
 }
 
 .score {
+  padding: 20px;
   font-size: medium;
   margin-bottom: 10px;
 }
 
-.columnLeft {
-  width: 50px;
+.scoreleft {
+  width: 50%;
+  max-height: 100px;
   height: 50%;
   border: 1px solid black;
   background-color: pink;
   border-radius: 5%;
   float: left;
-  width: 40%;
+  width: 80%;
+  max-width: 150px;
+  display: float-left;
+
 }
 
-.columnRight {
-  float: right;
-  width: 40%;
-  width: 50px;
-  height: 50%;
-  border: 1px solid black;
-  background-color: pink;
+.scoreleft > p {
+  max-height:10px;
+  font-size: small;
+  font-weight: bolder;
+}
+
+.scoreright{
+  width: 50%;
+  max-width: 100px;
+  max-height: 100px;
+  height: 80px;
+
   border-radius: 5%;
+
+  float: clear;
+}
+
+.scoreright > button {
+  height: 40px;
+  width: 80px;
+  font-size: small;
+  font-weight: bolder;
+  float: right;
+  background-color: pink;
+  color: #000;
+  float: clear;
+  
 }
 
 .enterNumber {

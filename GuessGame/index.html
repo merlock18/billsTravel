@@ -20,10 +20,17 @@
       <div class="main">
         <!-- Score and Reset -->
         <div class="score">
-          <p>Current Score: <span id="currentScore">10</span></p>
-          <p>History High Score: <span id="highScore">0</span></p>
-          <button id="playButton">Reset</button>
-        </div>
+          <div class="scoreleft">         
+            <p>Score: <span id="currentScore">10</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
+          </div>
+
+          <di class="scoreright">
+            <button id="resetButton">Reset</button>
+          </div>
+
+        
+
         <div class="enterNumber">
           <img src="img/question.jpeg" alt="Enter Number Image" />
           <input
@@ -44,7 +51,7 @@
             Your guessed was correct. <span id="randonNumber"></span> is my
             secret number.
           </p>
-          <p>Your Score<span id="guessScore"></span></p>
+          <p>Your Score<span id="guessScore"></span></p>  
           <p>Best: <span id="bestScore"></span></p>
           <button class="AgainBtn">Play Again</button>
         </div>
