@@ -1,4 +1,5 @@
 // select DOM elements
+const resetButton = document.getElementById("resetButton");
 const guessInput = document.getElementById("guessInput");
 const checkButton = document.getElementById("checkButton");
 const message = document.getElementById("message");
@@ -6,6 +7,16 @@ const currentScore = document.getElementById("currentScore");
 const highScore = document.getElementById("highScore");
 const playButton = document.getElementById("playButton");
 const secretNumberElement = document.getElementById("secretNumberValue");
+const errorMessage = document.getElementById("errorMessage");
+
+// check if the local storage is supported
+if (localStorage.clickcount) {
+  localStorage.clickcount = Number(localStorage.clickcount) + 1;
+  console.log(localStorage.clickcount);
+} else {
+  localStorage.clickcount = 1;
+  console.log(localStorage.clickcount);
+}
 
 // initialize variables
 let secretNumber = Math.floor(Math.random() * 100) + 1;
@@ -55,6 +66,19 @@ function updateScore() {
   }
 }
 
+// event listener for the user input
+guessInput.addEventListener("input", function () {
+  // console.log("input changed: ", guessInput.value);
+  // console.log("Is Number: ", Number.parseInt(guessInput.value) );
+  // isValidNumber(guessInput.value);
+  if (!isValidNumber(Number.parseInt(guessInput.value))) {
+    console.log("not a valid number");
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+});
+
 // event listener for the check button
 checkButton.addEventListener("click", function () {
   console.log("check button clicked");
@@ -101,6 +125,27 @@ checkButton.addEventListener("click", function () {
 
 // event listener for the play button
 playButton.addEventListener("click", function () {
+  // reset the secret number and the score
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+  score = 10;
+
+  //// reset the message, the input field, and the CSS styles
+  message.textContent = "Guess a number between 1 and 100";
+  message.classList.remove("correct", "incorrect");
+  document.body.style.backgroundColor = "";
+  guessInput.disabled = false;
+  checkButton.disabled = false;
+  guessInput.value = "";
+
+  // hide the secret number
+  secretNumberElement.style.display = "none";
+
+  // update the current score element
+  currentScore.textContent = score;
+});
+
+// event listener for the reset button
+restButton.addEventListener("click", function () {
   // reset the secret number and the score
   secretNumber = Math.floor(Math.random() * 100) + 1;
   score = 10;

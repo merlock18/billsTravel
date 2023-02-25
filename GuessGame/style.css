@@ -90,7 +90,7 @@
   display: block;
   width: 70px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30%;
 }
 
 .enterNumber > input {
@@ -161,24 +161,27 @@
   height: 400px;
 }
 
-.input {
+.inputNumber {
   background-color: #a28159;
   width: 800%;
   height: 400px;
   text-align: center;
   font-family: "courier new", monospace;
+  box-shadow: 0 0 0.6rem #dc4b16;
 }
 
 .message {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: red;
+  animation: shake 0.2s ease-in-out 0s 2;
+  color: white !important;
+  width: 90%;
+  margin: auto;
+  font-weight: bold;
+  padding-top: 10px;
+  text-shadow: 2px 2px #ff0000;
 }
 
-.input[type="text"] {
-  font-size: 24px;
-  padding: 5px 10px;
-  margin-right: 10px;
+#errorMessage {
+  display: none;
 }
 
 button {
@@ -237,4 +240,19 @@ button:hover {
   border: 1px solid #888;
   width: 50%;
   text-align: center;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  75% {
+    margin-left: -0.5rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
 }
