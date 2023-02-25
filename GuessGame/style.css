@@ -90,6 +90,17 @@
   display: block;
   width: 70px;
   padding: 20px;
+  border-radius: 10px;
+}
+
+.enterNumber > input {
+  height: 30px;
+  width: 250px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(216, 211, 169);
+  text-align: center;
 }
 
 .win {
@@ -123,10 +134,6 @@
 }
 
 .loss {
-  padding-left: 20px;
-  padding-right: 20px;
-  visibility: visible;
-
   background-color: rgb(195, 150, 137);
   width: 80%;
   margin-left: auto;

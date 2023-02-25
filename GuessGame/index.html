@@ -34,15 +34,16 @@
         <div class="enterNumber">
           <img src="img/question.jpeg" alt="Enter Number Image" />
           <input
+            class="inputNumber"
             type="number"
             id="guessInput"
             placeholder="Enter a number from 1 to 100"
-            value="5"
+
           />
           <p></p>
           <button id="checkButton" class="AgainBtn">Check</button>
           <p id="errorMessage" class="message">
-            YOu can only enter a number between 1 and 100
+            You can only enter a number between 1 and 100
           </p>
         </div>
         <div class="win">
@@ -67,7 +68,10 @@
         <!-- Guess history-->
         <div class="history">
           <p>Guess History:</p>
-          <ul id="guessHistory"></ul>
+          <ul id="guessHistory">
+            <li id="guessitem"></li>
+          </ul>
+            
         </div>
       </div>
     </div>
