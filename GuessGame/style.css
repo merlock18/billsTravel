@@ -75,7 +75,6 @@
 }
 
 .enterNumber {
-  display: none;
   border-radius: 50px;
   background-color: #a28159;
   width: 80%;
@@ -84,19 +83,16 @@
   font-family: "courier new", monospace;
   margin-left: auto;
   margin-right: auto;
-  display: block;
 }
 
 .enterNumber > img {
-  border: 2px solid #000;
-  border-radius: 6%;
-  margin-top: 20px;
-  width: 70px;
+  margin: auto;
   display: block;
+  width: 70px;
+  padding: 20px;
 }
 
 .win {
-  display: none;
   top: 35px;
   background-color: rgba(116, 205, 172, 0.937);
   width: 80%;
@@ -107,7 +103,7 @@
 }
 
 .win > img {
-  display: none;
+  margin: auto;
   border: 2px solid #000;
   border-radius: 6%;
   margin-top: 20px;
@@ -120,11 +116,13 @@
   font-size: small;
   border-radius: 15px;
   cursor: pointer;
-  padding: 10px 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  display: block;
 }
 
 .loss {
-  display: none;
   padding-left: 20px;
   padding-right: 20px;
   visibility: visible;
