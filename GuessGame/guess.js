@@ -13,6 +13,7 @@ const win = document.getElementById("win");
 const lose = document.getElementById("lose");
 const tryAgainBtn = document.getElementById("tryAgainBtn");
 const playBtn = document.getElementById("playBtn");
+const history = document.getElementById("guessHistory");
 
 // check if the local storage is supported
 if (localStorage.highScore) {
@@ -26,6 +27,7 @@ let secretNumber = Math.floor(Math.random() * 100) + 1;
 let score = 10;
 
 let historyHighScore = 0;
+const guessHistory = [];
 
 // helper function to check if a number is valid
 function isValidNumber(num) {
@@ -120,6 +122,21 @@ checkButton.addEventListener("click", function () {
     } else {
       guessMessage.textContent = `Your guess is too high, try again!`;
     }
+
+    // add to guess history
+    let li = document.createElement("li"); // create li element.
+    li.innerHTML = guess; // assigning text to li using array value.
+    history.appendChild(li); // append li to ul.
+
+    // create ul element and set the attributes.
+    /*
+    for (i = 0; i <= guessHistory.length - 1; i++) {
+      let li = document.createElement("li"); // create li element.
+      li.innerHTML = guessHistory[i]; // assigning text to li using array value.
+      li.setAttribute("style", "display: block;"); // remove the bullets.
+      history.appendChild(li); // append li to ul.
+    }
+    */
     guessMessage.classList.add("incorrect");
     updateScore();
   }
@@ -142,6 +159,8 @@ resetButton.addEventListener("click", function () {
   errorMessage.style.display = "none";
   win.style.display = "none";
   guessMessage.textContent = "";
+  guessMessage.style.backgroundColor = "";
+  history.innerHTML = "";
   // update the current score element
   currentScore.textContent = score;
   highScore.textContent = historyHighScore;
@@ -179,6 +198,7 @@ playBtn.addEventListener("click", function () {
   enterNumber.style.display = "block";
   loss.style.display = "none";
   guessInput.value = "1";
+  win.style.display = "none";
 
   // update the current score element
   currentScore.textContent = score;
