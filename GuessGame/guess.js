@@ -19,6 +19,8 @@ const history = document.getElementById("guessHistory");
 if (localStorage.highScore) {
   localStorage.highScore = Number(localStorage.highScore);
   console.log(localStorage.highScore);
+} else {
+  localStorage.highScore = 0;
 }
 
 // initialize variables
@@ -26,7 +28,7 @@ let secretNumber = Math.floor(Math.random() * 100) + 1;
 
 let score = 10;
 
-let historyHighScore = 0;
+let historyHighScore = localStorage.highScore;
 const guessHistory = [];
 
 // helper function to check if a number is valid
@@ -159,7 +161,7 @@ resetButton.addEventListener("click", function () {
   errorMessage.style.display = "none";
   win.style.display = "none";
   guessMessage.textContent = "";
-  guessMessage.style.backgroundColor = "";
+  guessMessage.style.backgroundColor;
   history.innerHTML = "";
   // update the current score element
   currentScore.textContent = score;
