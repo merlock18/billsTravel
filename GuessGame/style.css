@@ -74,6 +74,10 @@
   float: clear;
 }
 
+#enterNumber {
+  display: block;
+}
+
 .enterNumber {
   border-radius: 50px;
   background-color: #a28159;
