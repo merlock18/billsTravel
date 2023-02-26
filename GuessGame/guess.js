@@ -15,7 +15,7 @@ const tryAgainBtn = document.getElementById("tryAgainBtn");
 const playBtn = document.getElementById("playBtn");
 const history = document.getElementById("guessHistory");
 
-// check if the local storage is supported
+// check if the local storage for the high score exists
 if (localStorage.highScore) {
   localStorage.highScore = Number(localStorage.highScore);
   console.log(localStorage.highScore);
@@ -25,7 +25,6 @@ if (localStorage.highScore) {
 
 // initialize variables
 let secretNumber = Math.floor(Math.random() * 100) + 1;
-
 let score = 10;
 
 let historyHighScore = localStorage.highScore;
@@ -35,11 +34,13 @@ const guessHistory = [];
 function isValidNumber(num) {
   if (typeof num === "number" && num >= 1 && num <= 100) {
     errorMessage.style.display = "none";
+    guessMessage.style.display = "none";
     return true;
   } else {
     console.log("not a valid number");
     errorMessage.style.display = "block";
     errorMessage.textContent = "Please enter a number between 1 and 100";
+
     guessInput.value = "";
     return false;
   }
@@ -80,7 +81,28 @@ function updateScore() {
   }
 }
 
+// helper function to reset the game
+function resetGame() {
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+  score = 10;
+
+  //// reset the message, the input field, and the CSS styles
+  message.textContent = "Guess a number between 1 and 100";
+  message.classList.remove("correct", "incorrect");
+  message.style.display = "block";
+  document.body.style.backgroundColor = "";
+  enterNumber.style.display = "block";
+  loss.style.display = "none";
+  guessInput.value = "1";
+  win.style.display = "none";
+  history.innerHTML = "";
+  // set the score to 10
+  currentScore.textContent = score;
+  highScore.textContent = localStorage.highScore;
+}
+
 // event listener for the user input
+
 guessInput.addEventListener("input", function () {
   // console.log("input changed: ", guessInput.value);
   console.log("In input event listener");
@@ -115,99 +137,35 @@ checkButton.addEventListener("click", function () {
     // update the history high score if the current score is higher
     if (historyHighScore < score) {
       historyHighScore = score;
-      highScore.textContent = historyHighScore;
+      localStorage.highScore = historyHighScore;
+      highScore.textContent = localStorage.highScore;
     }
   } else {
+    // show the guess message
+    guessMessage.style.display = "block";
     // update the message and the score if the guess is incorrect
     if (guess < secretNumber) {
       guessMessage.textContent = `Your guess is too low, try again!`;
     } else {
       guessMessage.textContent = `Your guess is too high, try again!`;
     }
+    guessMessage.classList.add("incorrect");
 
     // add to guess history
     let li = document.createElement("li"); // create li element.
     li.innerHTML = guess; // assigning text to li using array value.
     history.appendChild(li); // append li to ul.
 
-    // create ul element and set the attributes.
-    /*
-    for (i = 0; i <= guessHistory.length - 1; i++) {
-      let li = document.createElement("li"); // create li element.
-      li.innerHTML = guessHistory[i]; // assigning text to li using array value.
-      li.setAttribute("style", "display: block;"); // remove the bullets.
-      history.appendChild(li); // append li to ul.
-    }
-    */
-    guessMessage.classList.add("incorrect");
     updateScore();
   }
-
-  console.log("message after: ", errorMessage.textContent);
 });
 
-// event listener for the play button
-resetButton.addEventListener("click", function () {
-  // reset the secret number and the score
-  secretNumber = Math.floor(Math.random() * 100) + 1;
-  score = 10;
-
-  //// reset the message, the input field, and the CSS styles
-  message.textContent = "Guess a number between 1 and 100";
-  message.classList.remove("correct", "incorrect");
-  document.body.style.backgroundColor = "";
-  guessInput.value = "1";
-  enterNumber.style.display = "block";
-  errorMessage.style.display = "none";
-  win.style.display = "none";
-  guessMessage.textContent = "";
-  guessMessage.style.backgroundColor;
-  history.innerHTML = "";
-  // update the current score element
-  currentScore.textContent = score;
-  highScore.textContent = historyHighScore;
-});
-
-tryAgainBtn.addEventListener("click", function () {
-  // reset the secret number and the score
-  secretNumber = Math.floor(Math.random() * 100) + 1;
-  score = 10;
-
-  //// reset the message, the input field, and the CSS styles
-  message.style.display = "block";
-  message.textContent = "Guess a number between 1 and 100";
-  message.classList.remove("correct", "incorrect");
-  document.body.style.backgroundColor = "";
-  enterNumber.style.display = "block";
-  loss.style.display = "none";
-  guessInput.value = "1";
-
-  // update the current score element
-  currentScore.textContent = score;
-  highScore.textContent = historyHighScore;
-});
-
-playBtn.addEventListener("click", function () {
-  // reset the secret number and the score
-  secretNumber = Math.floor(Math.random() * 100) + 1;
-  score = 10;
-
-  //// reset the message, the input field, and the CSS styles
-  message.style.display = "block";
-  message.textContent = "Guess a number between 1 and 100";
-  message.classList.remove("correct", "incorrect");
-  document.body.style.backgroundColor = "";
-  enterNumber.style.display = "block";
-  loss.style.display = "none";
-  guessInput.value = "1";
-  win.style.display = "none";
-
-  // update the current score element
-  currentScore.textContent = score;
-  highScore.textContent = historyHighScore;
-});
+// event listener for the button
+resetButton.addEventListener("click", resetGame);
+tryAgainBtn.addEventListener("click", resetGame);
+playBtn.addEventListener("click", resetGame);
 
 // initialize the game
 message.textContent = "Guess a number between 1 and 100";
 currentScore.textContent = score;
-highScore.textContent = historyHighScore;
+highScore.textContent = localStorage.highScore;
