@@ -5,32 +5,37 @@ const checkButton = document.getElementById("checkButton");
 const message = document.getElementById("message");
 const currentScore = document.getElementById("currentScore");
 const highScore = document.getElementById("highScore");
-const playButton = document.getElementById("playButton");
 const secretNumberElement = document.getElementById("secretNumberValue");
 const errorMessage = document.getElementById("errorMessage");
 
 // check if the local storage is supported
-if (localStorage.clickcount) {
-  localStorage.clickcount = Number(localStorage.clickcount) + 1;
-  console.log(localStorage.clickcount);
-} else {
-  localStorage.clickcount = 1;
-  console.log(localStorage.clickcount);
+if (localStorage.highScore) {
+  localStorage.highScore = Number(localStorage.highScore);
+  console.log(localStorage.highScore);
 }
 
 // initialize variables
 let secretNumber = Math.floor(Math.random() * 100) + 1;
+
 let score = 10;
 let historyHighScore = 0;
 
 // helper function to check if a number is valid
 function isValidNumber(num) {
-  return typeof num === "number" && num >= 1 && num <= 100;
+  if (typeof num === "number" && num >= 1 && num <= 100) {
+    errorMessage.style.display = "none";
+    return true;
+  } else {
+    console.log("not a valid number");
+    errorMessage.style.display = "block";
+    guessInput.value = "";
+    return false;
+  }
 }
 
 // helper function to check if a guess is correct
 function isCorrectGuess(guess) {
-  return guess === secretNumber;
+  return guess == secretNumber;
 }
 
 // helper function to update the score and handle game over
@@ -45,7 +50,7 @@ function updateScore() {
   currentScore.textContent = score;
 
   // if the score is zero, the game is over
-  if (score === 0) {
+  if (score == 0) {
     // show the secret number
     secretNumberElement.textContent = `The secret number was ${secretNumber}`;
     secretNumberElement.style.display = "block";
@@ -69,32 +74,28 @@ function updateScore() {
 // event listener for the user input
 guessInput.addEventListener("input", function () {
   // console.log("input changed: ", guessInput.value);
-  // console.log("Is Number: ", Number.parseInt(guessInput.value) );
-  // isValidNumber(guessInput.value);
-  if (!isValidNumber(Number.parseInt(guessInput.value))) {
-    console.log("not a valid number");
-    errorMessage.style.display = "block";
-  } else {
-    errorMessage.style.display = "none";
-  }
+  console.log("In input event listener");
+  isValidNumber(Number(guessInput.value));
 });
 
 // event listener for the check button
 checkButton.addEventListener("click", function () {
-  console.log("check button clicked");
+  console.log("check button event listener");
   // get the guess from the input field
   const guess = Number(guessInput.value);
 
-  // clear the input field
-  guessInput.value = "";
+  console.log("guess: ", guess);
+  console.log("secret number: ", secretNumber);
+  console.log("message before : ", errorMessage.textContent);
 
-  // check if the guess is valid
+  errorMessage.style.display = "block";
+  // check if the guess is correct
+  console.log("is valid number: ", isValidNumber(guess));
   if (!isValidNumber(guess)) {
-    // show an error message if the guess is not valid
-    message.textContent = "Please enter a valid number between 1 and 100";
-    message.classList.add("incorrect");
+    errorMessage.classList.add("incorrect");
+    // clear the input field
+    guessInput.value = "";
   } else {
-    // check if the guess is correct
     if (isCorrectGuess(guess)) {
       // update the message and the background color if the guess is correct
       message.textContent = "Congratulations, you guessed the secret number!";
@@ -113,18 +114,19 @@ checkButton.addEventListener("click", function () {
     } else {
       // update the message and the score if the guess is incorrect
       if (guess < secretNumber) {
-        message.textContent = `Your guess is too low, try again!`;
+        errorMessage.textContent = `Your guess is too low, try again!`;
       } else {
-        message.textContent = `Your guess is too high, try again!`;
+        errorMessage.textContent = `Your guess is too high, try again!`;
       }
-      message.classList.add("incorrect");
+      errorMessage.classList.add("incorrect");
       updateScore();
     }
   }
+  console.log("message after: ", errorMessage.textContent);
 });
 
 // event listener for the play button
-playButton.addEventListener("click", function () {
+resetButton.addEventListener("click", function () {
   // reset the secret number and the score
   secretNumber = Math.floor(Math.random() * 100) + 1;
   score = 10;
@@ -145,7 +147,7 @@ playButton.addEventListener("click", function () {
 });
 
 // event listener for the reset button
-restButton.addEventListener("click", function () {
+resetButton.addEventListener("click", function () {
   // reset the secret number and the score
   secretNumber = Math.floor(Math.random() * 100) + 1;
   score = 10;
